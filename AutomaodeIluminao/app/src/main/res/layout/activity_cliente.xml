@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.diego.automaodeiluminao.Cliente">
+
+    <TextView
+        android:id="@+id/respostaServidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032" />
+
+    <TextView
+        android:id="@+id/ipServidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Endereço IP:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.095"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/respostaServidor"
+        app:layout_constraintVertical_bias="0.037" />
+
+    <TextView
+        android:id="@+id/portaServidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Porta:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.204"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/respostaServidor"
+        app:layout_constraintVertical_bias="0.164" />
+
+    <EditText
+        android:id="@+id/enderecoIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="IP do Servidor"
+        android:inputType="text"
+        android:text="10.0.0.1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintStart_toEndOf="@+id/ipServidor"
+        app:layout_constraintTop_toBottomOf="@+id/respostaServidor"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/portaServer"
+        android:layout_width="77dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="5000"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.083"
+        app:layout_constraintStart_toEndOf="@+id/portaServidor"
+        app:layout_constraintTop_toBottomOf="@+id/enderecoIP"
+        app:layout_constraintVertical_bias="0.036" />
+
+    <Button
+        android:id="@+id/btnLigar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ligar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnDesligar"
+        app:layout_constraintHorizontal_bias="0.707"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/portaServer"
+        app:layout_constraintVertical_bias="0.114" />
+
+    <Button
+        android:id="@+id/btnDesligar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desligar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/portaServer"
+        app:layout_constraintVertical_bias="0.114" />
+
+</android.support.constraint.ConstraintLayout>
